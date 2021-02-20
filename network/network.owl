@@ -4,18 +4,18 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:owl="http://www.w3.org/2002/07/owl#"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-   xmlns:base="http://example.dummy/network#"
+   xmlns:base="http://purl.org/abac-ontology/network#"
 >
 
- <owl:Class rdf:about="http://example.dummy/network#NetworkActivity"/>
+ <owl:Class rdf:about="http://purl.org/abac-ontology/network#NetworkActivity"/>
  
- <owl:ObjectProperty rdf:about="http://example.dummy/network#hasSourcePort">
-        <rdfs:domain rdf:resource="http://example.dummy/network#NetworkActivity"/>
+ <owl:ObjectProperty rdf:about="http://purl.org/abac-ontology/network#hasSourcePort">
+        <rdfs:domain rdf:resource="http://purl.org/abac-ontology/network#NetworkActivity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
  </owl:ObjectProperty>
  
- <owl:ObjectProperty rdf:about="http://example.dummy/network#hasSourceIPv4">
-        <rdfs:domain rdf:resource="http://example.dummy/network#NetworkActivity"/>
+ <owl:ObjectProperty rdf:about="http://purl.org/abac-ontology/network#hasSourceIPv4">
+        <rdfs:domain rdf:resource="http://purl.org/abac-ontology/network#NetworkActivity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
  </owl:ObjectProperty>
 </rdf:RDF>
