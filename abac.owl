@@ -1,0 +1,970 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.dummy/abrbac#ABAC#"
+     xml:base="http://example.dummy/abrbac#ABAC"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:abrbac="http://example.dummy/abrbac#"
+	 xmlns:platys="http://www.platys.org/platys.owl#"
+	 xmlns:event="http://eulersharp.sourceforge.net/2003/03swap/event#"
+	 xmlns:rbac="http://dig.csail.mit.edu/2007/rowlbac/approach1/rbac#"
+     xmlns:network="http://example.dummy/network#"
+	 >
+    <owl:Ontology rdf:about="http://example.dummy/abrbac#ABAC"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.dummy/abrbac#attrValueConstrObj -->
+
+    <owl:AnnotationProperty rdf:about="http://example.dummy/abrbac#attrValueConstrObj">
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#ConstrObjAction"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#attrValueConstrObjMod -->
+
+    <owl:AnnotationProperty rdf:about="http://example.dummy/abrbac#attrValueConstrObjMod">
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#ConstrObjModAction"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#attrValueConstrSub -->
+
+    <owl:AnnotationProperty rdf:about="http://example.dummy/abrbac#attrValueConstrSub">
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#ConstrSubAction"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#attrValueConstrSubMod -->
+
+    <owl:AnnotationProperty rdf:about="http://example.dummy/abrbac#attrValueConstrSubMod">
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#ConstrSubModAction"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#time -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#time"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.dummy/abrbac#CA -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#CA"/>
+    
+
+
+    <!-- http://example.dummy/abrbac#OA -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#OA"/>
+    
+
+
+    <!-- http://example.dummy/abrbac#SA -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#SA"/>
+    
+
+
+    <!-- http://example.dummy/abrbac#UA -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#UA"/>
+    
+
+
+    <!-- http://example.dummy/abrbac#accessFromLoc -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#accessFromLoc">
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#Object"/>
+        <rdfs:range rdf:resource="http://www.platys.org/platys.owl#GeoPlace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#attrNameConstrObj -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#attrNameConstrObj">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#ConstrObjAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#String"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#attrNameConstrObjMod -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#attrNameConstrObjMod">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#ConstrObjModAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#String"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#attrNameConstrSub -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#attrNameConstrSub">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#ConstrSubAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#String"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#attrNameConstrSubMod -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#attrNameConstrSubMod">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#ConstrSubModAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#String"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#context -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#context">
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#RequestedAction"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#Context"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#contextActivity -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#contextActivity">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#CA"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#Context"/>
+        <rdfs:range rdf:resource="http://www.platys.org/platys.owl#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#contextDate -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#contextDate">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#CA"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#Context"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#contextDay -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#contextDay">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#CA"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#Context"/>
+        <rdfs:range rdf:resource="http://eulersharp.sourceforge.net/2003/03swap/event#Day"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#contextNetworkActivity -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#contextNetworkActivity">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#CA"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#Context"/>
+        <rdfs:range rdf:resource="http://example.dummy/network#NetworkActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#contextTime -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#contextTime">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#CA"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#Context"/>
+        <rdfs:range rdf:resource="http://eulersharp.sourceforge.net/2003/03swap/event#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#createdby -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#createdby">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#OA"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#Object"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#inConflictWith -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#inConflictWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#Role"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#oRole -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#oRole">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#OA"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#Object"/>
+        <rdfs:range rdf:resource="http://dig.csail.mit.edu/2007/rowlbac/approach1/rbac#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#object -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#object">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#RequestedAction"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#objectConstrObj -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#objectConstrObj">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#ConstrObjAction"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#objectConstrObjMod -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#objectConstrObjMod">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#ConstrObjModAction"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#occursOnDay -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#occursOnDay">
+        <rdfs:domain rdf:resource="http://www.platys.org/platys.owl#Activity"/>
+        <rdfs:range rdf:resource="http://eulersharp.sourceforge.net/2003/03swap/event#Day"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#permission -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#permission">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#RequestedAction"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#Permission"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#readRole -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#readRole">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#oRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#sLocation -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#sLocation">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#UA"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#Subject"/>
+        <rdfs:range rdf:resource="http://www.platys.org/platys.owl#GeoPlace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#sRole -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#sRole">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#SA"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#Subject"/>
+        <rdfs:range rdf:resource="http://dig.csail.mit.edu/2007/rowlbac/approach1/rbac#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#sclearance -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#sclearance">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#SA"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#Subject"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#Clearance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#sensitivity -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#sensitivity">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#OA"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#Object"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#Classification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#subCreator -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#subCreator">
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#Subject"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#subject -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#subject">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#RequestedAction"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#Subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#subjectConstrObj -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#subjectConstrObj">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#ConstrObjAction"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#Subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#subjectConstrObjMod -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#subjectConstrObjMod">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#ConstrObjModAction"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#Subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#subjectConstrSub -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#subjectConstrSub">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#ConstrSubAction"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#Subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#subjectConstrSubMod -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#subjectConstrSubMod">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#ConstrSubModAction"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#Subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#uLocation -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#uLocation">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#UA"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#User"/>
+        <rdfs:range rdf:resource="http://www.platys.org/platys.owl#GeoPlace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#uRole -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#uRole">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#UA"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#User"/>
+        <rdfs:range rdf:resource="http://dig.csail.mit.edu/2007/rowlbac/approach1/rbac#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#uclearance -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#uclearance">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#UA"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#User"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#Clearance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#uploadRole -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#uploadRole">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#oRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#userConstrSub -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#userConstrSub">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#ConstrSubAction"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#userConstrSubMod -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#userConstrSubMod">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#ConstrSubModAction"/>
+        <rdfs:range rdf:resource="http://example.dummy/abrbac#Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#writeRole -->
+
+    <owl:ObjectProperty rdf:about="http://example.dummy/abrbac#writeRole">
+        <rdfs:subPropertyOf rdf:resource="http://example.dummy/abrbac#oRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.dummy/abrbac#classificationLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://example.dummy/abrbac#classificationLevel">
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#Classification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#clearanceLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://example.dummy/abrbac#clearanceLevel">
+        <rdfs:domain rdf:resource="http://example.dummy/abrbac#Clearance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#contextDate -->
+
+    <owl:DatatypeProperty rdf:about="http://example.dummy/abrbac#contextDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#endTime -->
+
+    <owl:DatatypeProperty rdf:about="http://example.dummy/abrbac#endTime">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eulersharp.sourceforge.net/2003/03swap/event#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.dummy/abrbac#startTime -->
+
+    <owl:DatatypeProperty rdf:about="http://example.dummy/abrbac#startTime">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eulersharp.sourceforge.net/2003/03swap/event#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dig.csail.mit.edu/2007/rowlbac/approach1/rbac#Action -->
+
+    <owl:Class rdf:about="http://dig.csail.mit.edu/2007/rowlbac/approach1/rbac#Action"/>
+    
+
+
+    <!-- http://dig.csail.mit.edu/2007/rowlbac/approach1/rbac#Role -->
+
+    <owl:Class rdf:about="http://dig.csail.mit.edu/2007/rowlbac/approach1/rbac#Role"/>
+    
+
+
+    <!-- http://eulersharp.sourceforge.net/2003/03swap/event#Day -->
+
+    <owl:Class rdf:about="http://eulersharp.sourceforge.net/2003/03swap/event#Day"/>
+    
+
+
+    <!-- http://eulersharp.sourceforge.net/2003/03swap/event#Event -->
+
+    <owl:Class rdf:about="http://eulersharp.sourceforge.net/2003/03swap/event#Event"/>
+    
+
+
+    <!-- http://example.dummy/abrbac#Classification -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#Classification">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.dummy/abrbac#classificationLevel"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.dummy/abrbac#Clearance -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#Clearance">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.dummy/abrbac#clearanceLevel"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.dummy/abrbac#ConstrObjAction -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#ConstrObjAction"/>
+    
+
+
+    <!-- http://example.dummy/abrbac#ConstrObjModAction -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#ConstrObjModAction"/>
+    
+
+
+    <!-- http://example.dummy/abrbac#ConstrSubAction -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#ConstrSubAction"/>
+    
+
+
+    <!-- http://example.dummy/abrbac#ConstrSubModAction -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#ConstrSubModAction"/>
+    
+
+
+    <!-- http://example.dummy/abrbac#Context -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#Context"/>
+    
+
+
+    <!-- http://example.dummy/abrbac#Object -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#Object"/>
+    
+
+
+    <!-- http://example.dummy/abrbac#Permission -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#Permission"/>
+    
+
+
+    <!-- http://example.dummy/abrbac#PermittedAction -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#PermittedAction">
+        <rdfs:subClassOf rdf:resource="http://example.dummy/abrbac#RequestedAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.dummy/abrbac#PermittedConstrObj -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#PermittedConstrObj">
+        <rdfs:subClassOf rdf:resource="http://example.dummy/abrbac#RequestedAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.dummy/abrbac#PermittedConstrObjMod -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#PermittedConstrObjMod">
+        <rdfs:subClassOf rdf:resource="http://example.dummy/abrbac#RequestedAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.dummy/abrbac#PermittedConstrSub -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#PermittedConstrSub">
+        <rdfs:subClassOf rdf:resource="http://example.dummy/abrbac#RequestedAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.dummy/abrbac#PermittedConstrSubMod -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#PermittedConstrSubMod">
+        <rdfs:subClassOf rdf:resource="http://example.dummy/abrbac#RequestedAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.dummy/abrbac#ProhibitedAction -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#ProhibitedAction">
+        <rdfs:subClassOf rdf:resource="http://example.dummy/abrbac#RequestedAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.dummy/abrbac#ProhibitedConstrObj -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#ProhibitedConstrObj">
+        <rdfs:subClassOf rdf:resource="http://example.dummy/abrbac#RequestedAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.dummy/abrbac#ProhibitedConstrObjMod -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#ProhibitedConstrObjMod">
+        <rdfs:subClassOf rdf:resource="http://example.dummy/abrbac#RequestedAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.dummy/abrbac#ProhibitedConstrSub -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#ProhibitedConstrSub">
+        <rdfs:subClassOf rdf:resource="http://example.dummy/abrbac#RequestedAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.dummy/abrbac#ProhibitedConstrSubMod -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#ProhibitedConstrSubMod">
+        <rdfs:subClassOf rdf:resource="http://example.dummy/abrbac#RequestedAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.dummy/abrbac#RequestedAction -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#RequestedAction">
+        <rdfs:subClassOf rdf:resource="http://dig.csail.mit.edu/2007/rowlbac/approach1/rbac#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.dummy/abrbac#Role -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#Role"/>
+    
+
+
+    <!-- http://example.dummy/abrbac#Subject -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#Subject"/>
+    
+
+
+    <!-- http://example.dummy/abrbac#User -->
+
+    <owl:Class rdf:about="http://example.dummy/abrbac#User"/>
+    
+
+
+    <!-- http://example.dummy/network#NetworkActivity -->
+
+    <owl:Class rdf:about="http://example.dummy/network#NetworkActivity"/>
+    
+
+
+    <!-- http://www.platys.org/platys.owl#Activity -->
+
+    <owl:Class rdf:about="http://www.platys.org/platys.owl#Activity"/>
+    
+
+
+    <!-- http://www.platys.org/platys.owl#GeoPlace -->
+
+    <owl:Class rdf:about="http://www.platys.org/platys.owl#GeoPlace"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Property -->
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#String -->
+
+    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#String"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#class -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#class"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.dummy/abrbac#RequestedAction -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#RequestedAction">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#attrNameConstrObj -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#attrNameConstrObj">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#attrNameConstrObjMod -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#attrNameConstrObjMod">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#attrNameConstrSub -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#attrNameConstrSub">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#attrNameConstrSubMod -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#attrNameConstrSubMod">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#attrValueConstrObj -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#attrValueConstrObj">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#attrValueConstrObjMod -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#attrValueConstrObjMod">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#attrValueConstrSub -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#attrValueConstrSub">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#attrValueConstrSubMod -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#attrValueConstrSubMod">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#context -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#context">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#object -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#object">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#objectConstrObj -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#objectConstrObj">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#objectConstrObjMod -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#objectConstrObjMod">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#permission -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#permission">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#reqTime -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#reqTime">
+        <rdf:type rdf:resource="http://eulersharp.sourceforge.net/2003/03swap/event#Event"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#subject -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#subject">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#subjectConstrObj -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#subjectConstrObj">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#subjectConstrObjMod -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#subjectConstrObjMod">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#subjectConstrSub -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#subjectConstrSub">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#subjectConstrSubMod -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#subjectConstrSubMod">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#userConstrSub -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#userConstrSub">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.dummy/abrbac#userConstrSubMod -->
+
+    <owl:NamedIndividual rdf:about="http://example.dummy/abrbac#userConstrSubMod">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
