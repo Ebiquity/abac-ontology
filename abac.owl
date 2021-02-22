@@ -503,13 +503,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
     </owl:DatatypeProperty>
     
-
-
-    <!-- http://purl.org/abac-ontology#contextDate -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/abac-ontology#contextDate">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    </owl:DatatypeProperty>
     
 
 
